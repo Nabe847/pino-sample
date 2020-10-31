@@ -1,0 +1,38 @@
+{
+    "name": "pino-sample",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "node:inspect": "node --inspect dist\\index.js | pino-pretty -c",
+        "node:pino-pretty": "node dist\\index.js | pino-pretty -c",
+        "run": "npm run build:live",
+        "build": "tsc -p .",
+        "build:live": "nodemon --watch src\\index.ts --exec ts-node src\\index.ts | pino-pretty -c"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Neufo/pino-sample.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Neufo/pino-sample/issues"
+    },
+    "homepage": "https://github.com/Neufo/pino-sample#readme",
+    "devDependencies": {
+        "@types/express": "^4.17.8",
+        "@types/node": "^14.14.6",
+        "@types/pino": "^6.3.3",
+        "@types/pino-http": "^5.0.5",
+        "nodemon": "^2.0.6",
+        "ts-node": "^9.0.0",
+        "typescript": "^4.0.5"
+    },
+    "dependencies": {
+        "express": "^4.17.1",
+        "pino": "^6.7.0",
+        "pino-http": "^5.3.0"
+    }
+}
