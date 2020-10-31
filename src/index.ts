@@ -6,7 +6,7 @@ app.use(pino());
 
 app.get("/", function (req, res) {
     req.log.info("something");
-    res.send("hello world!!!");
+    res.send("hello pino!");
 });
 
 app.listen(3000);

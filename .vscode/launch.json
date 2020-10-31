@@ -27,6 +27,28 @@
             "program": "${workspaceFolder}\\dist\\index.js",
             "outFiles": ["${workspaceFolder}/**/*.js"],
             "outputCapture": "std"
+        },
+        {
+            "name": "TS Node",
+            "type": "node",
+            "request": "launch",
+            "env": {},
+            "args": [".\\src\\index.ts"],
+            "runtimeArgs": ["--nolazy", "-r", "ts-node\\register"],
+            "sourceMaps": true,
+            "cwd": "${workspaceRoot}",
+            "protocol": "inspector",
+            "outputCapture": "std"
+        },
+        {
+            "name": "nodemon",
+            "type": "node",
+            "request": "attach",
+            "sourceMaps": true,
+            "restart": true,
+            "port": 9229,
+            "cwd": "${workspaceRoot}",
+            "protocol": "inspector"
         }
     ]
 }
